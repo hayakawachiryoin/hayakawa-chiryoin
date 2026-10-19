@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>早川治療院｜愛知県長久手市｜腰痛・スポーツ障害・鍼灸治療の専門院</title>
-<meta name="description" content="MLB日本人初トレーナー・北京五輪帯同。愛知県長久手市の早川治療院。腰痛は3回で治す。完全予約制・1日6名限定の痛みの治療専門院。">
+<meta name="description" content="MLB日本人初トレーナー・北京五輪帯同。愛知県長久手市の早川治療院。腰痛は3回で治す。完全予約制・1日4名限定の痛みの治療専門院。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -94,6 +94,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,46,74,0.9
 .fcard-num{font-family:"Noto Serif JP",serif;font-size:38px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:10px;}
 .fcard-title{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:8px;}
 .fcard-body{font-size:13px;color:var(--ink-mid);line-height:1.9;}
+
+
+/* ━━ FLOW（治療の流れ）━━ */
+.flow-bg{background:var(--bg2);}
+.flow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px;}
+.flow-card{background:#fff;border:1px solid var(--border);border-radius:4px;padding:22px 18px;position:relative;}
+.flow-card.first{border:2px solid var(--gold);background:var(--gold-pale);}
+.flow-step{font-family:"Noto Serif JP",serif;font-size:11px;letter-spacing:.14em;color:var(--gold);margin-bottom:6px;}
+.flow-title{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.5;}
+.flow-body{font-size:12.5px;color:var(--ink-mid);line-height:1.9;}
+.flow-note{font-size:13px;color:var(--ink-mid);line-height:2;background:#fff;border-left:3px solid var(--gold);padding:14px 18px;border-radius:2px;}
 
 /* ━━ MENU ━━ */
 .menu-bg{background:var(--navy);}
@@ -188,7 +199,7 @@ hr.rule{border:none;border-top:1px solid var(--border);margin:0;}
   .hero{grid-template-columns:1fr;}
   .hero-right{height:300px;}
   .hero-left{padding:60px 24px 52px;}
-  .reason-grid,.feature-grid,.menu-grid{grid-template-columns:1fr;}
+  .reason-grid,.feature-grid,.menu-grid,.flow-grid{grid-template-columns:1fr;}
   .gallery-grid{grid-template-columns:1fr 1fr;}
   .gi.tall{aspect-ratio:4/3;grid-row:span 1;}
   .treat-grid{grid-template-columns:1fr;}
@@ -222,6 +233,7 @@ const IMGS = {
     <a href="#reason">選ばれる理由</a>
     <a href="#career">経歴</a>
     <a href="#treatment">治療について</a>
+    <a href="#flow">治療の流れ</a>
     <a href="#menu">料金メニュー</a>
     <a href="#access">アクセス</a>
   </div>
@@ -231,7 +243,7 @@ const IMGS = {
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
-    <div class="hero-eyebrow">愛知県長久手市 ｜ 完全予約制 ｜ 1日6名限定</div>
+    <div class="hero-eyebrow">愛知県長久手市 ｜ 完全予約制 ｜ 1日4名限定</div>
     <p class="hero-catch">MLB日本人初トレーナー・北京五輪帯同</p>
     <h1 class="hero-title">
       <em>腰痛</em>は、<br>
@@ -242,14 +254,17 @@ const IMGS = {
       あなたの日常の痛みに。<br>
       体を立体的に読む触診と、たった3秒の鍼で、痛みの根本を断ちます。
     </p>
+    <p style="font-size:12px;color:rgba(255,255,255,.55);line-height:1.9;margin:-18px 0 28px;">
+      初診で今のお体の状態を確かめ、腰痛の方には、2回目の治療から3回で治す内容をご説明します。
+    </p>
     <div class="hero-badges">
       <div class="hero-badge"><strong>MLB デトロイト・タイガース</strong>帯同（日本人初・1999〜2000）</div>
       <div class="hero-badge"><strong>北京オリンピック</strong>日本代表ウェイトリフティングチーム帯同（2008）</div>
       <div class="hero-badge"><strong>豊田合成スコーピオンズ・ジェイテクトスティングス</strong>帯同中（現役）</div>
-      <div class="hero-badge">治療のクオリティを守るため<strong>1日6名限定・完全予約制</strong></div>
+      <div class="hero-badge">治療のクオリティを守るため<strong>1日4名限定・完全予約制</strong></div>
     </div>
     <div class="hero-btns">
-      <a href="contact.html" class="btn-gold">ご予約はこちら</a>
+      <a href="contact.html" class="btn-gold">初回45分を予約する</a>
       <a href="#menu" class="btn-wh">料金を見る</a>
     </div>
   </div>
@@ -294,13 +309,13 @@ const IMGS = {
     </div>
     <div class="rcard">
       <div class="rcard-num">02</div>
-      <div class="rcard-title">1日6名限定だからできる丁寧な治療</div>
-      <div class="rcard-body">治療のクオリティを維持するため、1日の受け入れ人数を6名に限定しています。すべての施術は院長・早川和浩が直接担当。「流れ作業」とは無縁の、一人ひとりに向き合う治療を提供します。</div>
+      <div class="rcard-title">1日4名限定だからできる丁寧な治療</div>
+      <div class="rcard-body">治療のクオリティを維持するため、1日の受け入れ人数を4名に限定しています。すべての施術は院長・早川和浩が直接担当。「流れ作業」とは無縁の、一人ひとりに向き合う治療を提供します。</div>
     </div>
     <div class="rcard">
       <div class="rcard-num">03</div>
       <div class="rcard-title">「治す」だけでなく「再発させない」</div>
-      <div class="rcard-body">プロアスリートのケアで培った再発防止の視点で、痛みの原因を根本から解決します。特に学生アスリートには「運動後に来院」する特別プログラムを用意。動いても痛くない体を作ります。</div>
+      <div class="rcard-body">プロアスリートのケアで培った再発防止の視点で、痛みの原因を根本から解決します。動いても痛くない体を作ります。</div>
     </div>
   </div>
 </div>
@@ -376,27 +391,59 @@ const IMGS = {
 </div>
 </div>
 
+<!-- FLOW -->
+<div class="flow-bg" id="flow">
+<div class="sec-inner">
+  <p class="sec-eyebrow">FLOW</p>
+  <h2 class="sec-title">初診から、その後の治療まで</h2>
+  <p class="sec-sub">はじめての方は45分から始めます。2回目以降の時間は、お体の状態を見てご提案します。</p>
+  <div class="flow-grid">
+    <div class="flow-card">
+      <div class="flow-step">STEP 1</div>
+      <div class="flow-title">ご予約</div>
+      <div class="flow-body">はじめての方は「初回45分」をご予約ください。どのコースがよいか分からない場合も、そのままご相談いただけます。</div>
+    </div>
+    <div class="flow-card first">
+      <div class="flow-step">STEP 2</div>
+      <div class="flow-title">初回45分</div>
+      <div class="flow-body">これまでの症状と経過をうかがい、痛む場所だけでなく身体全体を確認します。全身のマッサージと、必要な部位への鍼を合わせて行い、今のお体の状態を知ります。施術後に、今後の治療方針をご説明します。</div>
+    </div>
+    <div class="flow-card">
+      <div class="flow-step">STEP 3</div>
+      <div class="flow-title">次回の時間をご提案</div>
+      <div class="flow-body">初回の結果をもとに、ご希望をかなえる治療プランを一緒に考えます。通常は30分、必要に応じて45分をご提案します。全身をじっくり診たい方などには、60分もおすすめします。</div>
+    </div>
+    <div class="flow-card">
+      <div class="flow-step">STEP 4</div>
+      <div class="flow-title">状態に合わせて調整</div>
+      <div class="flow-body">お体の変化を見ながら、治療内容・時間・来院の間隔を調整します。毎回45分を受けていただく、という意味ではありません。</div>
+    </div>
+  </div>
+  <p class="flow-note">腰痛の方には、初診のときに「2回目の治療から3回で治す」内容をご説明します。初診は、今のお体の状態を知り、治療計画を決めるための回です。</p>
+</div>
+</div>
+
 <!-- MENU -->
 <div class="menu-bg" id="menu">
 <div class="menu-inner">
   <p class="menu-eyebrow">TREATMENT MENU</p>
   <h2 class="menu-title">料金メニュー</h2>
-  <p class="menu-sub">すべての施術は院長・早川和浩が直接担当します。</p>
+  <p class="menu-sub">すべての施術は院長・早川和浩が直接担当します。<br>はじめての方、および最後の来院から6ヶ月以上あいた方は、初回45分（初診料が別に¥3,000かかります）からお受けします。</p>
 
   <div class="menu-grid">
     <div class="mcard">
       <div class="mcard-badge badge-gray">30分コース</div>
-      <div class="mcard-name">スタンダードコース</div>
-      <div class="mcard-desc">初めての方・短時間で集中的にケアしたい方向け。触診で全身の状態を読み解き、鍼とマッサージで痛みの根本にアプローチします。</div>
+      <div class="mcard-name">30分コース</div>
+      <div class="mcard-desc">ポイントをしぼって整えたい方に。2回目以降の、通常のコースです。症状のある場所が1か所で、鍼治療を中心に集中して受けたい方に向いています。</div>
       <div class="mcard-footer">
         <span class="mcard-time">30分</span>
         <span class="mcard-price">¥11,000</span>
       </div>
     </div>
     <div class="mcard featured">
-      <div class="mcard-badge badge-gold">45分 ★人気コース</div>
-      <div class="mcard-name">腰痛スペシャルコース</div>
-      <div class="mcard-desc">「腰痛3回で治す」の主力コース。腰・骨盤・下肢の連動を読み解き、痛みの原因にダイレクトに鍼を打ちます。慢性腰痛・ぎっくり腰・ヘルニア・坐骨神経痛の方に。</div>
+      <div class="mcard-badge badge-gold">45分 ★初診はこのコース</div>
+      <div class="mcard-name">45分コース</div>
+      <div class="mcard-desc">はじめての方は、このコースからです。じっくり問診をして、全身のマッサージと必要な部位への鍼で、今のお体の状態を確かめます。2回目以降は、症状が2か所ある方や、関連する部位まで丁寧に診てほしい方に。</div>
       <div class="mcard-footer">
         <span class="mcard-time">45分</span>
         <span class="mcard-price">¥16,000</span>
@@ -404,8 +451,8 @@ const IMGS = {
     </div>
     <div class="mcard">
       <div class="mcard-badge badge-dark">60分コース</div>
-      <div class="mcard-name">プロフェッショナルコース</div>
-      <div class="mcard-desc">全身を鍼とマッサージで徹底的にケア。疲労が蓄積したアスリート・重症の方・全身しっかり診てほしい方向け。</div>
+      <div class="mcard-name">60分コース</div>
+      <div class="mcard-desc">全身をじっくり整えたい方に。鍼もマッサージもしっかり受けたい方、アスリート、症状が3か所以上ある方、遠方で月に1回通えるかどうかという方におすすめです。</div>
       <div class="mcard-footer">
         <span class="mcard-time">60分</span>
         <span class="mcard-price">¥20,000</span>
@@ -414,14 +461,16 @@ const IMGS = {
   </div>
 
   <div class="menu-grid">
-    <div class="mcard pack" style="grid-column:1/3;">
-      <div class="mcard-badge badge-green">前払いパック ★最おすすめ</div>
+    <div class="mcard pack" style="grid-column:1/-1;">
+      <div class="mcard-badge badge-green">前払いパック</div>
       <div class="mcard-name">腰痛 3回完結パック</div>
       <div class="pack-points">
-        <div class="pack-point">腰痛スペシャルコース（45分）× 3回分</div>
-        <div class="pack-point">有効期限：初回施術日より60日以内</div>
-        <div class="pack-point">2回で完治した場合、残1回は腰痛スペシャルコースに繰越OK</div>
+        <div class="pack-point">初診のあと、2回目の治療から45分コースを3回</div>
+        <div class="pack-point">有効期限：初診日より60日以内</div>
+        <div class="pack-point">2回で完治した場合、残り1回は45分コースに繰越OK</div>
+        <div class="pack-point">初診料（¥3,000）は別にかかります。初診でお体を確認したあとにご案内します</div>
       </div>
+      <p style="margin:0 0 12px;"><a href="contact.html" style="font-size:12px;color:var(--green);text-decoration:underline;">初回に相談する</a></p>
       <div class="mcard-footer" style="border-top-color:#c8ddd0;">
         <div>
           <div class="cross-price">バラ受講 ¥48,000</div>
@@ -430,68 +479,31 @@ const IMGS = {
         <span class="mcard-price">¥42,000</span>
       </div>
     </div>
-    <div class="mcard" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);">
-      <div class="mcard-badge badge-gray">2人で受けるプログラム</div>
-      <div class="mcard-name">ペアコンディショニング</div>
-      <div class="mcard-desc">カップル・親子・チームメイトの2人で来院。施術と酸素カプセルを同時進行で活用する、他院にはないプログラム。</div>
-      <div class="mcard-footer">
-        <span class="mcard-time">2人合計 約90分</span>
-        <div>
-          <div class="cross-price">通常 ¥26,000</div>
-          <span class="mcard-price">¥24,000</span>
-        </div>
-      </div>
-    </div>
   </div>
 
   <div class="add-wrap" style="padding:24px 0 0;">
     <table class="add-table" style="color:rgba(255,255,255,.6);">
       <tr>
         <td style="color:rgba(255,255,255,.7);border-bottom-color:rgba(255,255,255,.1);">
-          酸素カプセル（単体）
-          <small style="color:rgba(255,255,255,.4);">施術とセットで¥1,500〜に割引</small>
+          酸素カプセル
         </td>
         <td style="color:#fff;border-bottom-color:rgba(255,255,255,.1);">45分 ¥2,000 ／ 60分 ¥3,000</td>
       </tr>
       <tr>
         <td style="color:rgba(255,255,255,.7);border-bottom-color:rgba(255,255,255,.1);">
           初診料
-          <small style="color:rgba(255,255,255,.4);">初回のみ</small>
+          <small style="color:rgba(255,255,255,.4);">はじめての方、最後の来院から6ヶ月以上あいた方（初回45分）</small>
         </td>
         <td style="color:#fff;border-bottom-color:rgba(255,255,255,.1);">¥3,000</td>
       </tr>
       <tr>
-        <td style="color:rgba(255,255,255,.7);border-bottom-color:rgba(255,255,255,.1);">
-          再診料
-          <small style="color:rgba(255,255,255,.4);">最終来院から6ヶ月以上の場合</small>
-        </td>
-        <td style="color:#fff;border-bottom-color:rgba(255,255,255,.1);">¥1,000</td>
-      </tr>
-      <tr>
-        <td style="color:rgba(255,255,255,.7);border-bottom-color:none;">時間外・休診日対応</td>
+        <td style="color:rgba(255,255,255,.7);border-bottom-color:none;">休日・時間外
+          <small style="color:rgba(255,255,255,.4);">各コース料金に加算</small></td>
         <td style="color:#fff;border-bottom-color:none;">¥2,000</td>
       </tr>
     </table>
-    <div style="margin-top:16px;background:rgba(184,147,58,.15);border:1.5px solid var(--gold);border-radius:4px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;">
-      <span style="font-size:22px;flex-shrink:0;">🎁</span>
-      <div>
-        <div style="font-size:13px;font-weight:500;color:var(--gold);margin-bottom:4px;letter-spacing:.04em;">初回パック購入で初診料（¥3,000）無料！</div>
-        <div style="font-size:12px;color:rgba(255,255,255,.75);line-height:1.8;">初診時に「腰痛3回完結パック（¥42,000）」または「学生アスリート腰痛特別コース（¥65,000）」をご購入の方は、初診料¥3,000を無料にいたします。</div>
-      </div>
-    </div>
   </div>
 </div>
-</div>
-
-<!-- STUDENT CTA -->
-<div class="student-cta">
-  <h3>学生アスリートの腰痛でお悩みの方へ</h3>
-  <p>
-    「治っても練習したらまた痛くなる」を根本から解決する<br>
-    5回完結の学生アスリート専用プログラムがあります。
-  </p>
-  <a href="student_LP.html" class="btn-white">学生アスリートコースを見る</a>
-              <p style="font-size:13px;color:#c0392b;margin-top:6px;">※ お支払いは現金・PayPay等QRコード決済のみ（クレジットカード不可）</p>
 </div>
 
 <!-- PROFILE -->
@@ -513,14 +525,14 @@ const IMGS = {
     </div>
     <div>
       <p class="profile-name">早川 和浩</p>
-      <p class="profile-kana">はやかわ かずひろ ／ 早川治療院 院長 ／ 2008年9月開業</p>
+      <p class="profile-kana">はやかわ かずひろ ／ 早川治療院 院長 ／ 2008年8月末開業・2013年9月 長久手市根の神に移転</p>
       <p class="profile-body">
         1997年にNATA（全米アスレティックトレーナーズ協会）認定資格を取得後、
         1999〜2000年に日本人として初めてMLBデトロイト・タイガースのアシスタントトレーナーに就任。
         帰国後はOSGフェニックスバスケットボールのヘッドトレーナー（2001〜2003年）を経て、
         トライデントスポーツ医療専門学校の専任講師（2003〜2007年）として次世代の育成にも携わった。<br><br>
         2008年には北京オリンピック日本代表ウェイトリフティングチームに専属トレーナーとして帯同。
-        同年9月に早川治療院を開業し、17年以上にわたってスポーツ外傷・腰痛・痛みの治療を専門に行う。<br><br>
+        同年8月末、日進市赤池にKazスポーツ鍼灸マッサージ治療院を開業。2013年9月に長久手市根の神に移転し、早川治療院として14年目を迎えた。18年以上にわたってスポーツ外傷・腰痛・痛みの治療を専門に行う。<br><br>
         現在はB.LEAGUEの豊田合成スコーピオンズ（2023年〜）、
         Vリーグのジェイテクトスティングス（2024年〜）のトレーナーを務め、
         一般社団法人アスレティック鍼灸師協会の代表理事として活動中。
@@ -574,10 +586,12 @@ const IMGS = {
   <p>
     「どのコースが合うかわからない」という方も<br>
     お電話でお気軽にご相談いただけます。<br>
-    1日6名限定のため、お早めのご予約をおすすめします。
+    1日4名限定のため、お早めのご予約をおすすめします。<br>
+    以前に受診された方も、最後の来院から6ヶ月以上あいている場合は、初回と同じ45分でご予約ください。<br>
+    時間を変えたいときは、LINEかお電話でご相談ください。
   </p>
   <div class="cta-btns">
-    <a href="contact.html" style="display:inline-block;background:#0e7c86;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:bold;margin-bottom:8px;">WEBフォームで予約・お問い合わせ</a>
+    <a href="contact.html" style="display:inline-block;background:#0e7c86;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:bold;margin-bottom:8px;">初回45分を予約する（WEBフォーム）</a>
     <a href="tel:0561-58-9399" class="btn-gold">電話で予約 0561-58-9399</a>
     <a href="tel:090-4182-6944" class="btn-wh">院長直通 090-4182-6944</a>
   </div>
@@ -615,7 +629,7 @@ const items = [
   "豊田合成スコーピオンズ 帯同中（2023〜）",
   "ジェイテクトスティングス 帯同中（2024〜）",
   "教え子・弟子がMLBタンパベイレイズ・プロバスケ・プロ野球で活躍",
-  "1日6名限定 完全予約制 ｜ 腰痛は3回で治す",
+  "1日4名限定 完全予約制 ｜ 腰痛は3回で治す",
 ];
 const html_items = [...items, ...items].map(t => `<span class="ticker-item">${t}</span>`).join("");
 document.getElementById("ticker-inner").innerHTML = html_items;
