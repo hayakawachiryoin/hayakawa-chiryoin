@@ -315,7 +315,7 @@ nav {
 .services .section-label { color: rgba(255,255,255,.45); }
 .services .section-title { color: #fff; }
 .services .section-sub { color: rgba(255,255,255,.55); }
-.service-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.service-cards { display: grid; grid-template-columns: minmax(0, 560px); justify-content: center; gap: 20px; }
 .service-card {
   border: 1px solid rgba(184,147,58,.25);
   padding: 44px 40px;
@@ -844,42 +844,14 @@ footer p { font-size: 11px; color: rgba(255,255,255,.2); line-height: 2; }
     <div class="section-label">Services &amp; Pricing</div>
     <h2 class="section-title">Our Treatments</h2>
     <p class="section-sub">
-      Two carefully crafted programs for international patients.
-      All treatments performed directly by Director Hayakawa Kazuhiro.
+      One carefully crafted 60-minute program for international patients.
+      Every treatment is performed directly by Director Hayakawa Kazuhiro.
     </p>
 
     <div class="service-cards">
-      <!-- Course 1 -->
-      <div class="service-card">
-        <div class="service-duration">60 Minutes · 指圧 Shiatsu</div>
-        <h3>
-          <span>指圧マッサージコース</span>
-          Shiatsu &amp; Massage
-        </h3>
-        <div class="service-divider"></div>
-        <p class="service-desc">
-          A full-body Japanese shiatsu and therapeutic massage session.
-          Beginning with thorough palpation to map your body's tension,
-          Director Hayakawa applies targeted pressure along key meridian points
-          to release chronic muscle tension, restore circulation, and rebalance your energy.
-          Ideal for first-time patients, fatigue recovery, and those who prefer needle-free treatment.
-        </p>
-        <ul class="service-includes">
-          <li>Full-body palpation &amp; assessment</li>
-          <li>Japanese shiatsu (meridian pressure therapy)</li>
-          <li>Therapeutic massage for targeted areas</li>
-          <li>Post-treatment guidance &amp; self-care advice</li>
-        </ul>
-        <div class="service-price-area">
-          <div class="service-price"><sup>¥</sup>30,000</div>
-          <p class="service-price-note">60 min · First visit fee +¥3,000</p>
-        </div>
-      </div>
-
-      <!-- Course 2 -->
       <div class="service-card featured">
-        <div class="service-badge">MOST EFFECTIVE</div>
-        <div class="service-duration">90 Minutes · 鍼 + 指圧 Acupuncture + Shiatsu</div>
+        <div class="service-badge">60-MINUTE PROGRAM</div>
+        <div class="service-duration">60 Minutes · 鍼 + 指圧 Acupuncture + Shiatsu</div>
         <h3>
           <span>鍼治療 + マッサージコース</span>
           Acupuncture + Massage
@@ -900,8 +872,8 @@ footer p { font-size: 11px; color: rgba(255,255,255,.2); line-height: 2; }
           <li>Recovery guidance &amp; follow-up advice</li>
         </ul>
         <div class="service-price-area">
-          <div class="service-price"><sup>¥</sup>45,000</div>
-          <p class="service-price-note">90 min · First visit fee +¥3,000</p>
+          <div class="service-price"><sup>$</sup>200</div>
+          <p class="service-price-note">60 min · First visit fee included</p>
         </div>
       </div>
     </div>
@@ -909,9 +881,8 @@ footer p { font-size: 11px; color: rgba(255,255,255,.2); line-height: 2; }
     <div class="first-visit-note">
       <span style="color:var(--gold);font-size:20px;">ℹ</span>
       <p>
-        <strong>First Visit Fee: +¥3,000</strong> — A one-time intake consultation fee for new patients
-        (also applies if more than 6 months have passed since your last visit).
-        This includes a comprehensive health intake and a detailed discussion of your symptoms and goals.
+        <strong>The $200 price includes the first visit fee</strong> — a comprehensive health intake and
+        a detailed discussion of your symptoms and goals.
         Payment accepted: Cash (JPY) · Credit card · IC card
       </p>
     </div>
@@ -1248,8 +1219,7 @@ footer p { font-size: 11px; color: rgba(255,255,255,.2); line-height: 2; }
             <label class="form-label">Treatment *</label>
             <select class="form-select" name="treatment" required>
               <option value="">Select a treatment...</option>
-              <option value="shiatsu">Shiatsu &amp; Massage — 60 min ¥30,000</option>
-              <option value="acupuncture">Acupuncture + Massage — 90 min ¥45,000</option>
+              <option value="acupuncture">Acupuncture + Massage — 60 min $200 (first visit fee included)</option>
               <option value="unsure">Not sure — please advise</option>
             </select>
           </div>
